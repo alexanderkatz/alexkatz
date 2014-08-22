@@ -1,0 +1,217 @@
+/*
+ Theme Name:     Tonal Child
+ Theme URI:    
+ Description:    Tonal Child Theme
+ Author:         Alex Katz
+ Author URI:     http://alexkatz.me
+ Template:       tonal
+ Version:        1.0.0
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+
+@import url('../tonal/style.css');
+
+/* =Theme customization starts here */
+
+/* FONTS **************************************************************/
+
+@font-face {
+	font-family: 'mathlete';
+	src: url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.eot');
+	src: url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.eot?#iefix') format('embedded-opentype'), url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.woff') format('woff'), url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.ttf') format('truetype'), url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.svg#mathleteskinny') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'wisdomscript';
+	src: url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.eot');
+	src: url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.eot?#iefix') format('embedded-opentype'), url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.woff') format('woff'), url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.ttf') format('truetype'), url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.svg#wisdom_scriptregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: open sans;
+	font-weight: normal;
+}
+p {
+	font-size: 18px !important;
+	font-family: open sans;
+}
+/* LAYOUT **************************************************************/
+
+.center-block {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: left;
+}
+/*Remove borders and unwanted elements*/
+
+#page {
+	border: none !important;
+}
+#page:before,
+#page:after {
+	display: none
+}
+.home .entry-meta {
+	display: none;
+}
+.comment-icon,
+.entry-format {
+	display: none;
+}
+.site-description {
+	color: #0e7a8c !important;
+}
+.hentry {
+	border-bottom: 5px solid rgba(1, 1, 1, 0.5) !important;
+}
+/* HEADER **************************************************************/
+
+#masthead {
+	min-width: 100%;
+	border: none !important;
+	background: #E5E5E5;
+	background: #153644;
+	color: white !important;
+}
+.site-title h1 {
+	color: white !important;
+}
+#menu-nav {
+	margin: 0px;
+}
+#myheader {
+	margin: auto;
+}
+#myheadertext {
+	font-weight: normal;
+}
+#t1,
+#t3 {
+	font-family: mathlete, open sans;
+	display: block;
+	text-align: center;
+	font-size: 44px;
+	font-weight: normal;
+}
+#t2 {
+	font-family: wisdomscript, open sans;
+	text-align: center;
+	text-transform: none;
+	display: block;
+	font-size: 97px;
+	margin-top: 0px;
+	margin-bottom: -0px;
+	font-weight: normal;
+}
+#compIcon {
+	margin-top: -120px;
+	margin-left: 320px;
+}
+/* NAVIGATION **************************************************************/
+
+/* FOOTER **************************************************************/
+
+#myFooter {
+	width: 100%;
+	height: 200px;
+	background: url('images/footer.png') no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+.widget-areas {} .widget-area,
+.widget-area h1,
+.widget-area h2,
+.widget-area h3,
+.widget-area h4,
+.widget-area h5,
+.widget-area h6,
+.widget-area a,
+.widget-area a:visited {
+	color: black;
+}
+/* MEDIA QUERIES**************************************************************/
+
+@media only screen and (max-width: 40em) {
+	#compIcon {
+		display: none;
+	}
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	.main-navigation {
+		width: auto;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	.main-navigation {
+		width: auto;
+	}
+	#masthead {
+		padding: 60px 0;
+	}
+}
+/* NAVIGATION *******************************/
+
+/* Main Menu */
+
+@media only screen and (min-width: 40.063em) {
+	#menu-nav {
+		display: none;
+		/*hides toggle box*/
+	}
+	#menu-block {
+		display: block !important;
+		height: auto;
+		padding: 0px;
+		position: absolute;
+		z-index: 999;
+		width: 100%;
+		background: none !important;
+	}
+	#menu-block li {
+		float: left;
+		margin: 0px;
+		padding: 10px 10px;
+	}
+	.main-navigation ul ul a {
+		margin: 0px;
+	}
+	.sub-menu li {
+		float: none !important
+	}
+	/* END OF NAVIGATION RULES */
+	.main-navigation a {
+		font-family: open sans;
+		font-weight: 300
+	}
+	nav ul ul {
+		display: none !important;
+	}
+	nav ul li:hover > ul {
+		display: block !important;
+		list-style: none !important;
+		text-align: center;
+		width: auto;
+		height: auto;
+		background: #CFD0D2;
+		/*Prevents parent items from shifting to right */
+		white-space: nowrap;
+	}
+	.main-navigation ul ul li a {
+		color: white;
+	}
+	.main-navigation ul ul li a:hover {
+		color: #86CCB1;
+	}
+	.main-navigation ul ul li:before {
+		display: none;
+	}
+}
