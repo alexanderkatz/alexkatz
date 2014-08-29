@@ -19,15 +19,15 @@
 
 @font-face {
 	font-family: 'mathlete';
-	src: url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.eot');
-	src: url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.eot?#iefix') format('embedded-opentype'), url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.woff') format('woff'), url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.ttf') format('truetype'), url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.svg#mathleteskinny') format('svg');
+	src: url('fonts/mathlete-skinny-webfont.eot');
+	src: url('fonts/mathlete-skinny-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/mathlete-skinny-webfont.woff') format('woff'), url('http://alexkatz.me/css/fonts/mathlete-skinny-webfont.ttf') format('truetype'), url('fonts/mathlete-skinny-webfont.svg#mathleteskinny') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'wisdomscript';
-	src: url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.eot');
-	src: url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.eot?#iefix') format('embedded-opentype'), url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.woff') format('woff'), url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.ttf') format('truetype'), url('http://alexkatz.me/css/fonts/wisdom_script_aj-webfont.svg#wisdom_scriptregular') format('svg');
+	src: url('fonts/wisdom_script_aj-webfont.eot');
+	src: url('fonts/wisdom_script_aj-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/wisdom_script_aj-webfont.woff') format('woff'), url('fonts/wisdom_script_aj-webfont.ttf') format('truetype'), url('fonts/wisdom_script_aj-webfont.svg#wisdom_scriptregular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -90,6 +90,7 @@ p {
 }
 #myheader {
 	margin: auto;
+	max-width: 466px;
 }
 #myheadertext {
 	font-weight: normal;
@@ -151,18 +152,65 @@ p {
 	}
 }
 @media only screen and (min-width: 64.063em) {
-	.main-navigation {
-		width: auto;
-	}
 	#masthead {
-		padding: 60px 0;
+		padding: 80px 0;
 	}
 }
 /* NAVIGATION *******************************/
 
-/* Main Menu */
+/*Styles For Hamburger Menu*/
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (max-width: 40em) {
+	.main-navigation ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.main-navigation ul ul {
+		z-index: 99999;
+	}
+	.main-navigation ul ul a {
+		margin: 0 0 0 5px;
+	}
+	.main-navigation ul ul li:before {
+		content: '\f429';
+		float: left;
+		font-family: "Genericons";
+		font-size: 24px;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 0.9;
+	}
+	.main-navigation ul ul {
+		left: 100%;
+		top: 0;
+	}
+	.main-navigation li {
+		float: none;
+		font-size: 16px;
+		font-size: 1.6rem;
+		padding: 10px 0;
+		position: relative;
+	}
+	.main-navigation li:hover > ul {
+		display: block;
+	}
+	.main-navigation a {
+		color: rgba(255, 255, 255, 0.5);
+		display: block;
+		font-weight: 900;
+		text-decoration: none;
+	}
+	.main-navigation a:visited {
+		color: rgba(255, 255, 255, 0.5);
+	}
+	.main-navigation a:hover {
+		color: white;
+	}
+}
+/*Styles For Main Menu*/
+
+@media only screen and (min-width: 40em) {
 	#menu-nav {
 		display: none;
 		/*hides toggle box*/
@@ -175,43 +223,62 @@ p {
 		z-index: 999;
 		width: 100%;
 		background: none !important;
+		overflow: visible;
 	}
-	#menu-block li {
-		float: left;
-		margin: 0px;
-		padding: 10px 10px;
+	#menu-menu{
+		border:1px solid #ccc;
+		border-width:1px 0;
+		list-style:none;
+		margin:0;
+		padding:0;
+		text-align:center;
 	}
-	.main-navigation ul ul a {
-		margin: 0px;
+	#menu-menu li{
+		position:relative;
+		display:inline;
 	}
-	.sub-menu li {
-		float: none !important
+	#menu-menu a{
+		display:inline-block;
+		padding:10px;
 	}
-	/* END OF NAVIGATION RULES */
-	.main-navigation a {
-		font-family: open sans;
-		font-weight: 300
+	#menu-menu ul{
+		position:absolute;
+		/*top:100%; Uncommenting this makes the dropdowns work in IE7 but looks a little worse in all other browsers. Your call. */
+		left:-9999px;
+		margin:0;
+		padding:0;
+		text-align:left;
 	}
-	nav ul ul {
-		display: none !important;
+	#menu-menu ul li{
+		display:block;
 	}
-	nav ul li:hover > ul {
-		display: block !important;
-		list-style: none !important;
-		text-align: center;
-		width: auto;
-		height: auto;
-		background: #CFD0D2;
-		/*Prevents parent items from shifting to right */
-		white-space: nowrap;
+	#menu-menu li:hover ul{
+		left:0;
 	}
-	.main-navigation ul ul li a {
-		color: white;
+	#menu-menu li:hover a{
+		text-decoration:underline;
+		background:#f1f1f1;
 	}
-	.main-navigation ul ul li a:hover {
-		color: #86CCB1;
+	#menu-menu li:hover ul a{
+		text-decoration:none;
+		background:none;
 	}
-	.main-navigation ul ul li:before {
-		display: none;
+	#menu-menu li:hover ul a:hover{
+		text-decoration:underline;
+		background:#f1f1f1;
+	}
+	#menu-menu ul a{
+		white-space:nowrap;
+		display:block;
+		border-bottom:1px solid #ccc;
+	}
+	a{
+		color:#c00;
+		text-decoration:none;
+		font-weight:bold;
+	}
+	a:hover{
+		text-decoration:underline;
+		background:#f1f1f1;
 	}
 }

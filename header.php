@@ -50,11 +50,10 @@
 				<!-- .site-header -->
 				<?php } else { ?>
 				<div class="site-branding">
-					<h1 class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							
+					<h1 class="site-title">							
 							<div id="myheader">
-								<div id="myheader-text">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+									<div id="myheader-text">
 									<h1>
 										<span id="t1">Forays in</span>
 										<span id="t2">Web</span>
@@ -64,8 +63,8 @@
 				<div id="compIcon">
 					<img src="http://alexkatz.me/images/computer.png" width="146">
 				</div>
+				</a>
 		</div>
-		</a>
 		</h1>
 </div>
 <!-- .site-branding -->
