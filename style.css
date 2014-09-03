@@ -211,7 +211,9 @@ p {
 /*Styles For Main Menu*/
 
 @media only screen and (min-width: 40em) {
-	.main-navigation{width: 100%}
+	.main-navigation {
+		width: 100%
+	}
 	#menu-nav {
 		display: none;
 		/*hides toggle box*/
@@ -226,61 +228,129 @@ p {
 		background: none !important;
 		overflow: visible;
 	}
-	#menu-menu{
-		list-style:none;
-		margin:0;
-		padding:0;
-		/*text-align:center;*/
+	#menu-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 		text-transform: uppercase;
 	}
-	#menu-menu li{
-		position:relative;
-		display:inline;
+	#menu-menu li {
+		position: relative;
+		display: inline;
 	}
-	#menu-menu a{
-		display:inline-block;
-		padding:10px;
-/*		color: white;
-*/	}
-	#menu-menu ul{
-		position:absolute;
+	#menu-menu a {
+		display: inline-block;
+		padding: 10px;
+		/*		color: white;
+*/
+	}
+	#menu-menu ul {
+		position: absolute;
 		/*top:100%; Uncommenting this makes the dropdowns work in IE7 but looks a little worse in all other browsers. Your call. */
-		left:-9999px;
-		margin:0;
-		padding:0;
-		text-align:left;
+		left: -9999px;
+		margin: 0;
+		padding: 0;
+		text-align: left;
 	}
-	#menu-menu ul li{
-		display:block;
+	#menu-menu ul li {
+		display: block;
 	}
-	#menu-menu li:hover ul{
-		left:0;
+	#menu-menu li:hover ul {
+		left: 0;
 	}
-	#menu-menu li:hover a{
-		background:#f1f1f1;
+	#menu-menu li:hover a {
+		background: #f1f1f1;
 	}
-	#menu-menu li:hover ul a{
-		text-decoration:none;
-		background:none;
+	#menu-menu li:hover ul a {
+		text-decoration: none;
+		background: none;
 	}
-	#menu-menu li:hover ul a:hover{
-/*		text-decoration:underline;
-*/		background:#f1f1f1;
+	#menu-menu li:hover ul a:hover {
+		/*		text-decoration:underline;
+*/
+		background: #f1f1f1;
 	}
-	#menu-menu ul a{
-		white-space:nowrap;
-		display:block;
-		border-bottom:1px solid #ccc;
-/*		padding: 0px;
-*/		margin: 0px;
+	#menu-menu ul a {
+		white-space: nowrap;
+		display: block;
+		border-bottom: 1px solid #ccc;
+		/*		padding: 0px;
+*/
+		margin: 0px;
 	}
-	a{
-		color:#c00;
-		text-decoration:none;
-		font-weight:bold;
+	a {
+		color: #c00;
+		text-decoration: none;
+		font-weight: bold;
 	}
-	a:hover{
-/*		text-decoration:underline;
-*/		background:#f1f1f1;
+	a:hover {
+		background: #f1f1f1;
 	}
+}
+/*Style for Concept*/
+
+
+.portfolio {
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+.summary h1{text-align: center;}
+
+/* Circles *************************/
+
+#circles {
+
+	margin-left: 5px;
+
+	margin-bottom: 5px;
+
+}
+
+.circle {
+
+	width: 12px;
+
+	height: 12px;
+
+	background: black;
+
+	border-radius: 100%;
+
+	display: inline-block;
+
+}
+
+#c1 {
+
+	background: #FCB0AC;
+
+}
+
+#c2 {
+
+	background: #FEE48E;
+
+}
+
+#c3 {
+
+	background: #E3EFC6;
+
+}
+
+/* Images *************************/
+
+.desktop {
+	background: #bfbfbf;
+	border: solid #bfbfbf;
+	border-top-width: 10px;
+	border-bottom-width: 4px;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.desktop img {
+	width: 100%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
