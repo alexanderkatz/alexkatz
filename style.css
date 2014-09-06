@@ -51,6 +51,15 @@ p {
 	margin: 0 auto;
 	text-align: left;
 }
+/* Classes required for table method */
+
+.t-wrapper {
+	display: table;
+}
+.t-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
 /*Remove borders and unwanted elements*/
 
 #page {
@@ -75,47 +84,18 @@ p {
 }
 /* HEADER **************************************************************/
 
-#masthead {
-	min-width: 100%;
-	border: none !important;
-	background: #E5E5E5;
-	background: #153644;
-	color: white !important;
+#navwrapper {
+	width: 100%;
+	background: #23404e;
+	position: fixed;
+	top: 0px;
+	z-index: 99999;
 }
 .site-title h1 {
 	color: white !important;
 }
 #menu-nav {
 	margin: 0px;
-}
-#myheader {
-	margin: auto;
-	max-width: 466px;
-}
-#myheadertext {
-	font-weight: normal;
-}
-#t1,
-#t3 {
-	font-family: mathlete, open sans;
-	display: block;
-	text-align: center;
-	font-size: 44px;
-	font-weight: normal;
-}
-#t2 {
-	font-family: wisdomscript, open sans;
-	text-align: center;
-	text-transform: none;
-	display: block;
-	font-size: 97px;
-	margin-top: 0px;
-	margin-bottom: -0px;
-	font-weight: normal;
-}
-#compIcon {
-	margin-top: -120px;
-	margin-left: 320px;
 }
 /* NAVIGATION **************************************************************/
 
@@ -289,55 +269,35 @@ p {
 }
 /*Style for Concept*/
 
-
 .portfolio {
 	padding-top: 40px;
 	padding-bottom: 20px;
 }
-.summary h1{text-align: center;}
-
+.summary h1 {
+	text-align: center;
+}
 /* Circles *************************/
 
 #circles {
-
 	margin-left: 5px;
-
 	margin-bottom: 5px;
-
 }
-
 .circle {
-
 	width: 12px;
-
 	height: 12px;
-
 	background: black;
-
 	border-radius: 100%;
-
 	display: inline-block;
-
 }
-
 #c1 {
-
 	background: #FCB0AC;
-
 }
-
 #c2 {
-
 	background: #FEE48E;
-
 }
-
 #c3 {
-
 	background: #E3EFC6;
-
 }
-
 /* Images *************************/
 
 .desktop {
@@ -348,7 +308,6 @@ p {
 	border-radius: 10px;
 	width: 100%;
 }
-
 .desktop img {
 	width: 100%;
 	border-bottom-left-radius: 10px;

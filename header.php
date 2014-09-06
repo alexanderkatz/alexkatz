@@ -21,56 +21,20 @@
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
 			<?php do_action( 'before' ); ?>
-
-			<div id="menu-block">
-				<?php get_sidebar(); ?>
-			</div>
-			<!-- #menu-block-->
-
-			<header id="masthead" role="banner">
-
-				<div id="menu-nav" class="button-block"></div>
-
-				<?php if ( get_header_image() ) { ?>
-				<div id="site-header">
-					<div class="site-branding site-headerfix">
-						<h1 class="site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<?php bloginfo( 'name' ); ?>
-							</a>
-						</h1>
-						<h2 class="site-description">
-							<?php bloginfo( 'description' ); ?>
-						</h2>
-					</div>
-					<!-- .site-branding -->
+			<header class="t-wrapper" id="navwrapper">
+				<div class="t-cell" id="logo">
+				</div>
+				<div class="t-cell" id="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+						<?php bloginfo( 'name' ); ?>
 					</a>
 				</div>
-				<!-- .site-header -->
-				<?php } else { ?>
-				<div class="site-branding">
-					<h1 class="site-title">							
-							<div id="myheader">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<div id="myheader-text">
-									<h1>
-										<span id="t1">Forays in</span>
-										<span id="t2">Web</span>
-										<span id="t3">Development</span>
-									</h1>
+				<div class="t-cell">
+					<?php get_sidebar(); ?>
 				</div>
-				<div id="compIcon">
-					<img src="http://alexkatz.me/images/computer.png" width="146">
-				</div>
-				</a>
-		</div>
-		</h1>
-</div>
-<!-- .site-branding -->
-<?php } ?>
-</header>
+				<!-- #menu-block-->
+			</header>
+			
 <!-- #masthead .site-header -->
 
 <div id="content" class="site-content">
