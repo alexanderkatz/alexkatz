@@ -23,7 +23,58 @@
 <!-- #page -->
 
 <?php wp_footer(); ?>
+<!--Load JQuery-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+	// wrap in onload function
 
+	var headerHeight = $("header").css('height');
+	headerHeight = parseInt(headerHeight) + 40;
+	$("#main").css("paddingTop", (parseInt(headerHeight) + "px"));
+
+
+
+	/*
+	 * The following functions control the menu and sidebar
+	 */
+
+	// Hides sidebar if left open when closed
+	$(window).resize(function () {
+		if ($(".menu-menu-container").css("text-align") == 'right') {
+			$(".menu-menu-container").css("left", "-100%");
+		}
+	});
+
+	// Sidebar Click Function
+	$("#toggle").click(function () {
+		console.log("toggle clicked");
+		var left = parseInt($('.menu-menu-container').css('left'));
+		console.log(left);
+
+		if (left >= 0) {
+			hideSidebar();
+		} else {
+			showSidebar();
+		}
+	});
+
+	// HIDE SIDEBAR
+	function hideSidebar() {
+		console.log("hide");
+		$(".menu-menu-container").animate({
+			left: "-100%",
+		}, 200, 'linear');
+	}
+	// SHOW SIDEBAR
+	function showSidebar() {
+		console.log("showSidebar");
+		//console.log($("#navwrapper").css('height'));
+		$(".menu-menu-container").animate({
+			left: "0%",
+			top: $("#navwrapper").css('height'),
+		}, 200, 'linear');
+	}
+</script>
 </body>
 
 </html>

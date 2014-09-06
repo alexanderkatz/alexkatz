@@ -16,6 +16,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 		<?php wp_head(); ?>
+		
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -23,6 +24,7 @@
 			<?php do_action( 'before' ); ?>
 			<header class="t-wrapper" id="navwrapper">
 				<div class="t-cell" id="logo">
+					<img src="/wordpress/wp-content/themes/tonal-child/images/white-logo.png">
 				</div>
 				<div class="t-cell" id="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -33,8 +35,11 @@
 					<?php get_sidebar(); ?>
 				</div>
 				<!-- #menu-block-->
+				<div class="t-cell" id="toggle">
+					<img src="/wordpress/wp-content/themes/tonal-child/images/white-toggle.png">
+				</div>
 			</header>
-			
-<!-- #masthead .site-header -->
 
-<div id="content" class="site-content">
+			<!-- #masthead .site-header -->
+
+			<div id="content" class="site-content">
