@@ -68,10 +68,10 @@
 	// SHOW SIDEBAR
 	function showSidebar() {
 		console.log("showSidebar");
-		//console.log($("#navwrapper").css('height'));
+		// Gives the menu the correct top offset
+		$(".menu-menu-container").css("top",$("#navwrapper").css('height'));
 		$(".menu-menu-container").animate({
 			left: "0%",
-			top: $("#navwrapper").css('height'),
 		}, 200, 'linear');
 	}
 </script>
