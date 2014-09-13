@@ -20,9 +20,13 @@ get_header(); ?>
 					<!--echo the title then content-->
 					<?php echo '<h1>'. $page_data->post_title .'</h1>';?>
 					<?php echo apply_filters('the_content', $page_data->post_content); ?>	
+					
+					<!--VISIT SITE-->
+					<!-- echo single value of key url -->
+					<a class="visitsite" href="<?php echo get_post_meta($post->ID, 'url', true); ?>">Visit Site</a>
+					
+
 	
-					<!--Display Button-->	
-					<button class="btn block mtop">Visit Site</button>
 				</div>
 				</div>
 				<div class="col-md-8">
@@ -39,7 +43,7 @@ get_header(); ?>
 				</section>
 				</div>
 			</div>
-
+			
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main .site-main -->
