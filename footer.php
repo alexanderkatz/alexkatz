@@ -30,7 +30,7 @@
 
 	var headerHeight = $("header").css('height');
 	headerHeight = parseInt(headerHeight) + 40;
-	//$("#main").css("paddingTop", (parseInt(headerHeight) + "px"));
+	$("#main").css("paddingTop", (parseInt(headerHeight) + "px"));
 
 
 
@@ -40,8 +40,13 @@
 
 	// Hides sidebar if left open when closed
 	$(window).resize(function () {
-		if ($(".menu-menu-container").css("text-align") == 'right') {
-			$(".menu-menu-container").css("left", "-100%");
+		//console.log("RESIZE "+$("#menu-block").css("display"));
+		if ($("#menu-nav").css("display") == 'none') {
+			console.log("hide block");
+			//$(".menu-block").css("display", "none");
+			$("#menu-block").hide();
+			console.log($("#menu-block").css("display"));//, "none");
+
 		}
 	});
 
@@ -75,6 +80,7 @@
 		}, 200, 'linear');
 	}
 </script>
+
 
 </body>
 
