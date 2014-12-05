@@ -30,7 +30,7 @@
 
 	var headerHeight = $("header").css('height');
 	headerHeight = parseInt(headerHeight) + 40;
-	$("#main").css("paddingTop", (parseInt(headerHeight) + "px"));
+	//$("#main").css("paddingTop", (parseInt(headerHeight) + "px"));
 
 
 

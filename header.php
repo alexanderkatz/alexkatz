@@ -72,9 +72,11 @@
 <!-- .site-branding -->
 <?php } ?>
 </header>
+<!--
 	<div class="t-cell" id="toggle">
 		<img src="/wordpress/wp-content/themes/tonal-child/images/white-toggle.png">
 	</div>			
+-->
 			
 <!-- #masthead .site-header -->
 
