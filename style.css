@@ -189,11 +189,12 @@ p {
 }
 #menu-menu a {
 	text-decoration: none;
-	font-weight: bold;
 }
 #menu-menu a:hover {
 	background: #f1f1f1;
 }
+.current-menu-item {font-weight:900}
+
 /*Styles For Hamburger Menu*/
 
 @media only screen and (max-width: 40em) {
@@ -273,6 +274,7 @@ p {
 	#menu-menu a {
 		display: inline-block;
 		padding: 10px;
+		text-transform: uppercase;
 	}
 	#menu-menu ul {
 		position: absolute;
