@@ -25,6 +25,9 @@
 <?php wp_footer(); ?>
 <!--Load JQuery-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--Load Lightbox.js-->
+<script src="/wordpress/wp-content/themes/tonal-child/lightbox/js/lightbox.js"></script>
+
 <script>
 	// wrap in onload function
 
@@ -45,7 +48,7 @@
 			console.log("hide block");
 			//$(".menu-block").css("display", "none");
 			$("#menu-block").hide();
-			console.log($("#menu-block").css("display"));//, "none");
+			console.log($("#menu-block").css("display")); //, "none");
 
 		}
 	});
@@ -65,16 +68,16 @@
 
 	// HIDE SIDEBAR
 	function hideSidebar() {
-		console.log("hide");
-		$(".menu-menu-container").animate({
-			left: "-100%",
-		}, 200, 'linear');
-	}
-	// SHOW SIDEBAR
+			console.log("hide");
+			$(".menu-menu-container").animate({
+				left: "-100%",
+			}, 200, 'linear');
+		}
+		// SHOW SIDEBAR
 	function showSidebar() {
 		console.log("showSidebar");
 		// Gives the menu the correct top offset
-		$(".menu-menu-container").css("top",$("#navwrapper").css('height'));
+		$(".menu-menu-container").css("top", $("#navwrapper").css('height'));
 		$(".menu-menu-container").animate({
 			left: "0%",
 		}, 200, 'linear');

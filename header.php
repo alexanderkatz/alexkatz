@@ -16,6 +16,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
+		<!--Lightbox-->
+		<link rel="stylesheet" href="/wordpress/wp-content/themes/tonal-child/lightbox/css/screen.css">
+		<link rel="stylesheet" href="/wordpress/wp-content/themes/tonal-child/lightbox/css/lightbox.css">
 		<?php wp_head(); ?>
 	</head>
 
@@ -77,7 +80,7 @@
 		<img src="/wordpress/wp-content/themes/tonal-child/images/white-toggle.png">
 	</div>			
 -->
-			
+
 <!-- #masthead .site-header -->
 
 <div id="content" class="site-content">
