@@ -7,14 +7,11 @@
  Template:       tonal
  Version:        1.0.0
 */
-
 /* =Imports styles from the parent theme
 -------------------------------------------------------------- */
 
 @import url('../tonal/style.css');
-
 /* =Theme customization starts here */
-
 /* FONTS **************************************************************/
 
 @font-face {
@@ -24,6 +21,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'wisdomscript';
 	src: url('fonts/wisdom_script_aj-webfont.eot');
@@ -31,6 +29,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 h1,
 h2,
 h3,
@@ -40,6 +39,7 @@ h6 {
 	font-family: open sans;
 	font-weight: normal;
 }
+
 p {
 	font-size: 18px !important;
 	font-family: open sans;
@@ -56,22 +56,42 @@ p {
 #page {
 	border: none !important;
 }
+
 #page:before,
 #page:after {
 	display: none
 }
+
 .home .entry-meta {
 	display: none;
 }
+
 .comment-icon,
 .entry-format {
 	display: none;
 }
+
 .site-description {
 	color: #0e7a8c !important;
 }
+
 .hentry {
-	border-bottom: 5px solid rgba(1, 1, 1, 0.5) !important;
+/*	border-bottom: 5px solid rgba(1, 1, 1, 0.5) !important;*/
+	border-bottom: 0px solid rgba(1, 1, 1, 0.5) !important;
+}
+/* STRIPED **************************************************************/
+
+#main {
+	min-width: 100%;
+}
+
+.entry-header {
+	margin: auto;
+	max-width: 70%
+}
+
+.post:nth-child(2n) {
+	background: #f2f2f2;
 }
 /* HEADER **************************************************************/
 
@@ -82,19 +102,24 @@ p {
 	background: #153644;
 	color: white !important;
 }
+
 .site-title h1 {
 	color: white !important;
 }
+
 #menu-nav {
 	margin: 0px;
 }
+
 #myheader {
 	margin: auto;
 	max-width: 466px;
 }
+
 #myheadertext {
 	font-weight: normal;
 }
+
 #t1,
 #t3 {
 	font-family: mathlete, open sans;
@@ -103,6 +128,7 @@ p {
 	font-size: 44px;
 	font-weight: normal;
 }
+
 #t2 {
 	font-family: wisdomscript, open sans;
 	text-align: center;
@@ -113,12 +139,12 @@ p {
 	margin-bottom: -0px;
 	font-weight: normal;
 }
+
 #compIcon {
 	margin-top: -120px;
 	margin-left: 320px;
 }
 /* NAVIGATION **************************************************************/
-
 /* FOOTER **************************************************************/
 
 #myFooter {
@@ -128,7 +154,10 @@ p {
 	background-position: center center;
 	background-size: contain;
 }
-.widget-areas {} .widget-area,
+
+.widget-areas {}
+
+.widget-area,
 .widget-area h1,
 .widget-area h2,
 .widget-area h3,
@@ -146,55 +175,67 @@ p {
 		display: none;
 	}
 }
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 	.main-navigation {
 		width: auto;
 	}
 }
+
 @media only screen and (min-width: 64.063em) {
 	#masthead {
 		padding: 80px 0;
 	}
 }
 /* NAVIGATION *******************************/
-
 /* styles shared by both menus*/
 
 #menu-menu a {
 	color: white;
 }
+
 #menu-menu a:hover {
 	color: black;
 }
+
 #menu-menu ul li {
 	display: block;
 }
+
 #menu-menu li:hover ul {
 	left: 0;
 	background: #153644;
 }
+
 #menu-menu li:hover a {
 	background: #f1f1f1;
 }
+
 #menu-menu li:hover ul a {
 	text-decoration: none;
 	background: none;
 }
+
 #menu-menu li:hover ul a:hover {
 	background: #f1f1f1;
 }
+
 #menu-menu ul a {
 	display: block;
 	margin: 0px;
 }
+
 #menu-menu a {
 	text-decoration: none;
 }
+
 #menu-menu a:hover {
 	background: #f1f1f1;
 }
-.current-menu-item {font-weight:900}
 
+.current-menu-item {
+	font-weight: 900
+}
 /*Styles For Hamburger Menu*/
 
 @media only screen and (max-width: 40em) {
