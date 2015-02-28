@@ -88,6 +88,10 @@ a {
 .hentry {
 	border-bottom: 3px solid rgba(1, 1, 1, 0.5) !important;
 }
+
+.crayon-syntax {
+	margin-bottom: 20px !important;
+}
 /* HEADER **************************************************************/
 
 #masthead {
