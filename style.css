@@ -78,6 +78,12 @@ a {
 .site-description {
 	color: #0e7a8c !important;
 }
+/*Post Title*/
+
+.entry-header {
+	max-width: 800px;
+	margin: auto;
+}
 
 .hentry {
 	border-bottom: 3px solid rgba(1, 1, 1, 0.5) !important;
