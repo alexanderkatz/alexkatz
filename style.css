@@ -148,8 +148,8 @@ a {
 
 #myFooter {
 	width: 100%;
-	height: 200px;
-	background: url('images/footer.png') no-repeat;
+	height: 125px;
+	background: url('images/logo125.png') no-repeat;
 	background-position: center center;
 	background-size: contain;
 }
