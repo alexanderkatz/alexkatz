@@ -144,6 +144,12 @@ a {
 	margin-left: 320px;
 }
 /* NAVIGATION **************************************************************/
+
+/* IMAGE STYLE FOR SCREENSHOTS */
+.screen{
+	box-shadow: 0px 5px 17px 5px #BDBDB7;
+}
+
 /* FOOTER **************************************************************/
 
 #myFooter {
